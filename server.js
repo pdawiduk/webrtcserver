@@ -1,7 +1,7 @@
 var socketIO = require('socket.io');
-var server = require('http').createServer().listen(7000, '0.0.0.0');
+var server = require('https').createServer().listen(7000, '0.0.0.0');
 console.log(server.handshake) ;
-
+console.log(server.handshake.heads);
 var io = socketIO.listen(server);
 
 // Super simple server:
