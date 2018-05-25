@@ -1,9 +1,9 @@
 var socketIO = require('socket.io');
-var server = require('http').createServer().listen(7000);
+var server = require('http').createServer().listen(8080);
 console.log(server.handshake) ;
 
 var server_port = process.env.OPENSHIFT_NODEJS_PORT
-var server_ip_address = process.env.OPENSHIFT_NODEJS_IP 
+var server_ip_address = process.env.OPENSHIFT_NODEJS_IP
 console.log( "Listening on " + server_ip_address + ", port " + server_port )
 var io = socketIO.listen(server);
 
