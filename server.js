@@ -1,10 +1,8 @@
 var socketIO = require('socket.io');
-var server = require('https').createServer().listen(7000);
+var server = require('http').createServer().listen(7000, '0.0.0.0');
 console.log(server.handshake) ;
-console.log(process.env.OPENSHIFT_NODEJS_IP);
+console.log(server.handshake.heads);
 var io = socketIO.listen(server);
-
-
 
 // Super simple server:
 //  * One room only.
