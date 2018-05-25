@@ -1,5 +1,5 @@
 var socketIO = require('socket.io');
-var server = require('http').createServer().listen(8080);
+var server = require('http').createServer().listen(7000);
 console.log(server.handshake) ;
 
 var server_port = process.env.OPENSHIFT_NODEJS_PORT
